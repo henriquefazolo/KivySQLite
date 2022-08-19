@@ -1,0 +1,42 @@
+<Tela>:
+    id: tela_inicial
+    rows: 7
+    cols: 1
+    padding: 20
+    spacing: 20
+
+    Label:
+        id: texto
+        text: 'Insira seu nome:'
+
+    TextInput:
+        id: caixa_texto
+        on_focus: retorno.text = 'Seu numero de cadastro : '
+
+    Button:
+        id: botao
+        text: 'Salvar na Base de Dados'
+        border: 1,1,1,1
+        on_press: root.salvar_nome()
+        on_release: caixa_texto.text = ''
+    Label:
+        id: retorno
+        text: 'Seu numero de cadastro : '
+
+    Button:
+        id: exibir
+        text: 'Exibir numero de cadastro'
+        border: 1,1,1,1
+        on_press: root.exibir_numero()
+
+    Button:
+        id: deletar_tudo
+        text: 'Deletar base de dados'
+        border: 1,1,1,1
+        on_press: root.deletar_tudo()
+        on_release: caixa_texto.text = ''
+
+    Button:
+        id: tela2
+        text: 'Tela2'
+        on_press: caixa_texto.text = 'Ainda nao feito a TELA 2'
